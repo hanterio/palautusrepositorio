@@ -8,12 +8,6 @@ class AppLibrary:
     def reset_application(self):
         requests.post(f"{self._base_url}/tests/reset")
 
-    def go_to_starting_page(self):
-        requests.post(f"{self._base_url}")
-    
-    def register_page_should_be_open(self):
-        requests.post(f"{self._base_url}/register")
-
     def create_user(self, username, password):
         data = {
             "username": username,

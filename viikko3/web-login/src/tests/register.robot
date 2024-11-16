@@ -46,7 +46,33 @@ Register With Username That Is Already In Use
     New Password  kalle345
     New Password Confirmation  kalle345
     Register Credentials
+    Register Should Fail With Message  Username already in use
+
+Login After Successful Registration
+    New Username  ville
+    New Password  ville123
+    New Password Confirmation  ville123
+    Register Credentials
+    Register Should Succeed
+    Go To Ohtu
+    Logout User
+    Set Username  ville
+    Set Password  ville123
+    Submit Credentials
+    Login Should Succeed
+
+Login After Failed Registration
+    New Username  ville
+    New Password  ville1234
+    New Password Confirmation  ville123
+    Register Credentials
     Register Should Fail With Message  Passwords do not match
+    Login User
+    Set Username  ville
+    Set Password  ville1234
+    Submit Credentials
+    Login Should Fail With Message  Invalid username or password
+
 
 *** Keywords ***
 New Username
@@ -75,3 +101,32 @@ Reset Application Create User And Go To Register Page
     Reset Application
     Create User  kalle  kalle123
     Go To Register Page
+
+Go To Ohtu
+    Click Link  Continue to main page
+
+Logout User
+    Click Button  Logout
+
+Login User
+    Click Link  Login
+
+#Loginiin liittyvät avainsanat
+Set Username
+    [Arguments]  ${username}
+    Input Text  username  ${username}
+
+Set Password
+    [Arguments]  ${password}
+    Input Password  password  ${password}
+
+Submit Credentials
+    Click Button  Login
+
+Login Should Succeed
+    Main Page Should Be Open
+
+Login Should Fail With Message
+    [Arguments]  ${message}
+    Login Page Should Be Open
+    Page Should Contain  ${message}

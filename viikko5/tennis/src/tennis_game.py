@@ -23,6 +23,7 @@ class TennisGame:
             tilanne = "Advantage"
         else:
             tilanne = "Win for"
+            
         if pisteiden_ero < 0:
             pelaaja = self.player2_name
         else:

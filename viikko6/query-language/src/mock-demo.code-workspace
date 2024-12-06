@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../../../viikko4/mock-demo"
+		},
+		{
+			"path": "../../../viikko4/maksukortti-mock"
+		},
+		{
+			"path": "../../../viikko4/verkkokauppa"
+		},
+		{
+			"path": "../../../viikko5/tennis"
+		},
+		{
+			"path": "../../../viikko5/int-joukko"
+		},
+		{
+			"path": "../../../viikko5/laskin"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../ohtu_viikko6"
+		}
+	]
+}

@@ -3,3 +3,5 @@ Tämä on testi git stash harjoittelua varten
 Viikko 7 tehtävä 2:
 
 Tässä on muutos, jonka teen branchiin main.
+
+Ei oikeasti ollut muuto mainiin vaan haaraan. Tämä on oikeasti toinen tähän tehty muutos. Haaraan tosiaan.

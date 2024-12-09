@@ -1,0 +1,4 @@
+Ja tämä on toinen testi git stash harjoittelua varten.
+
+
+Nyt teen haarassa "toinen" muutoksen jonka committaan.
